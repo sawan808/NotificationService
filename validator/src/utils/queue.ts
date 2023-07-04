@@ -1,11 +1,15 @@
 import { Message } from "./message";
 
-export class priorityQueue {
-  items: Message[] = [];
-  constructor(message: Message | null) {
-    if (message) {
-      this.items.push(message);
-    }
+class PriorityQueue {
+  items: Message[];
+  // constructor(message: Message | null) {
+  //   if (message) {
+  //     this.items.push(message);
+  //   }
+  // }
+
+  constructor() {
+    this.items = [];
   }
 
   addMessage(message: Message) {
@@ -75,3 +79,6 @@ export class priorityQueue {
     }
   }
 }
+
+
+export const pQueue = new PriorityQueue();
